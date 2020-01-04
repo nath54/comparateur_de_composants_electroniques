@@ -1,4 +1,27 @@
 
+@-webkit-keyframes an_bg1 {
+    0%{background-position:57% 0%}
+    50%{background-position:44% 100%}
+    100%{background-position:57% 0%}
+}
+@-moz-keyframes an_bg1 {
+    0%{background-position:57% 0%}
+    50%{background-position:44% 100%}
+    100%{background-position:57% 0%}
+}
+@keyframes an_bg1 {
+    0%{background-position:57% 0%}
+    50%{background-position:44% 100%}
+    100%{background-position:57% 0%}
+}
+
+
+body{
+    background: linear-gradient(206deg, rgb(100,50,50), rgb(50,50,100));
+    -webkit-animation: an_bg1 10s ease infinite;
+    -moz-animation: an_bg1 10s ease infinite;
+    animation: an_bg1 10s ease infinite;
+}
 
 img{
     width:200px;

@@ -9,6 +9,7 @@ function makePage(id){
         //
         if(comp.type=="cpu"){
             var liste=[
+                ["Type","Processeur",""],
                 ["Nom",comp.nom,""],
                 ["Prix",comp.prix," €"],
                 ["Marque",comp.marque,""],
@@ -26,32 +27,33 @@ function makePage(id){
                 ["Température Max",comp.temp_max," °C"],
                 ["Date de lancement",comp.date_lancement,""]
             ];
-            tpc="1"
-            for(el of liste){
-                var ligne=document.createElement("tr");
-                var c1=document.createElement("td");
-                var c2=document.createElement("td");
-                if(tpc=="1"){
-                    tpc="2";
-                    c1.setAttribute("class","c11");
-                    c2.setAttribute("class","c21");
-                }
-                else{
-                    tpc="1";
-                    c1.setAttribute("class","c12");
-                    c2.setAttribute("class","c22");
-                }
-                var pc1=document.createElement("p");
-                var pc2=document.createElement("p");
-                pc1.innerHTML=el[0];
-                pc2.innerHTML=el[1]+el[2];
-                c1.appendChild(pc1);
-                c2.appendChild(pc2);
-                ligne.appendChild(c1);
-                ligne.appendChild(c2);
-                lignes.push(ligne);
+        }
+        //
+        tpc="1"
+        for(el of liste){
+            var ligne=document.createElement("tr");
+            var c1=document.createElement("td");
+            var c2=document.createElement("td");
+            if(tpc=="1"){
+                tpc="2";
+                c1.setAttribute("class","c11");
+                c2.setAttribute("class","c21");
             }
-            //
+            else{
+                tpc="1";
+                c1.setAttribute("class","c12");
+                c2.setAttribute("class","c22");
+            }
+            var pc1=document.createElement("p");
+            var pc2=document.createElement("p");
+            pc1.innerHTML=el[0];
+            pc2.innerHTML=el[1]+el[2];
+            c1.appendChild(pc1);
+            c2.appendChild(pc2);
+            ligne.appendChild(c1);
+            ligne.appendChild(c2);
+            lignes.push(ligne);
+            
         }
         //
         for(l of lignes){
