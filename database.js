@@ -12,7 +12,7 @@ var gpu1={nom:"NVIDAI GEFORCE GTX 1060 3GB",type:"gpu",image:"imgs/gtx1060.png",
 var gpu2={nom:"NVIDAI GEFORCE GTX 1060 6GB",type:"gpu",image:"imgs/gtx1060.png",marque:"NVIDIA",architecure:"Pascal",nb_cores:1280,base_clock:1506,boost_clock:1708,vit_mem:8,taille_mem:6,taille_int_mem:192,bande_passante_mem:192,directX:12,vopengl:4.5,res_max:[7680,4320,60],connecteurs_aff:["Display Port 1.4","HDMI 2.0b","Dual Link-DVI"],temp_max:97,consomation:120,connecteurs_alim_sup:"6-pin",prix:129}
 
 
-const composants=[cpu1,cpu2,cpu3,gpu1];
+const composants=[cpu1,cpu2,cpu3,gpu1,gpu2];
 
 
 
