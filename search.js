@@ -25,6 +25,8 @@ function add_result_page( results ){
             var titre=document.createElement("h2");
             titre.innerHTML=comp.nom;
             titre.setAttribute("class","txt1");
+            var texte1=document.createElement("p");
+            texte1.innerHTML=comp.type;
             var pp=document.createElement("p");
             pp.setAttribute("class","flotte");
             var img=document.createElement("img");
@@ -32,6 +34,7 @@ function add_result_page( results ){
             pp.appendChild(img);
             d1.appendChild(pp);
             d2.appendChild(titre);
+            d2.appendChild(texte1);
             d.appendChild(d1);
             d.appendChild(d2);
             document.getElementById("divresults").appendChild(d);
