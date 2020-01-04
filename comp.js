@@ -29,6 +29,29 @@ function makePage(id){
             ];
         }
         //
+        if(comp.type=="gpu"){
+            var liste=[
+                ["Type","Carte Graphique",""],
+                ["Nom",comp.nom,""],
+                ["Prix",comp.prix," €"],
+                ["Marque",comp.marque,""],
+                ["Nombre de coeurs",comp.nb_cores,""],
+                ["Fréquence de base",comp.base_clock," Mhz"],
+                ["Fréquence boost",comp.boost_clock," Mhz"],
+                ["Vitesse mémoire",comp.vit_mem," Gbps"],
+                ["Taille mémoire",comp.taille_mem," GB"],
+                ["Taille interface mémoire",comp.taille_int_mem,"-bit"],
+                ["Bande passante de ma mémoire",comp.bande_passante_mem," Go/sec"],
+                ["Derniere version de directX supportée",comp.directX,""],
+                ["Derniere version de opengl supportée",comp.vopengl,""],
+                ["Résolution Maximale",comp.res_max[0]+"x"+comp.res_max[1]+" à "+comp.res_max[2]+" Hz",""],
+                ["Connecteurs",comp.connecteurs_aff.join(","),""],
+                ["Température maximale",comp.temp_max," °C"],
+                ["Consommation",comp.consomation," W"],
+                ["Connecteurs d'alimentation supplémentaires ",comp.connecteurs_alim_sup,""]
+            ];
+        }
+        //
         tpc="1"
         for(el of liste){
             var ligne=document.createElement("tr");
