@@ -70,15 +70,15 @@ function makePage(id1,id2){
                     else{ mc=3; }
                 }
                 else if(el[3]=="nb2"){
-                    score1-=el[1];
-                    score2-=el[4];
+                    //score1-=el[1];
+                    //score2-=el[4];
                     if(el[1]<el[4]){ mc=1; }
                     else if(el[1]>el[4]){ mc=2; }
                     else{ mc=3; }
                 }
                 else if(el[3]=="prix"){
-                    score1-=el[1];
-                    score2-=el[4];
+                    //score1-=el[1];
+                    //score2-=el[4];
                     if(el[1]<el[4]){ mc=1; }
                     else if(el[1]>el[4]){ mc=2; }
                     else{ mc=3; }
@@ -97,6 +97,21 @@ function makePage(id1,id2){
                     else if( el[1][0]*el[1][1] < el[4][0]*el[4][1] ){ mc=2; }
                     else{ mc=3; }
                 }
+                else if(el[3]=="date"){
+                    dt1=el[1].split("/");
+                    dt2=el[4].split("/");
+                    dtt1=parseInt(dt1[2]+dt1[1]+dt1[0]);
+                    dtt2=parseInt(dt2[2]+dt2[1]+dt2[0]);
+                    if(dtt1>dtt2){
+                        mc=1;
+                    }
+                    else if(dtt1<dtt2){
+                        mc=2;
+                    }
+                    else{
+                        mc=3;
+                    }
+                }
             }
             var ligne=document.createElement("tr");
             var c1=document.createElement("td");
@@ -105,6 +120,8 @@ function makePage(id1,id2){
             var c4=document.createElement("td");
             if(tpc=="1"){
                 tpc="2";
+                var cg="cg1";
+                var cp="cp1";
                 c1.setAttribute("class","c11");
                 c2.setAttribute("class","c21");
                 c3.setAttribute("class","c21");
@@ -112,6 +129,8 @@ function makePage(id1,id2){
             }
             else{
                 tpc="1";
+                var cp="cp2";
+                var cg="cg2";
                 c1.setAttribute("class","c12");
                 c2.setAttribute("class","c22");
                 c3.setAttribute("class","c22");
@@ -121,9 +140,19 @@ function makePage(id1,id2){
             var pc2=document.createElement("p");
             var pc3=document.createElement("p");
             var pc4=document.createElement("p");
-            if( mc==1 ){ pc3.innerHTML=comp1.nom+"est le meilleur"; }
-            else if( mc==2 ){ pc3.innerHTML=comp2.nom+" est le meilleur"; }
-            else if( mc==3 ){ pc3.innerHTML="Pas comparé"; }
+            if( mc==1 ){
+                pc3.innerHTML=comp1.nom;
+                c2.setAttribute("class",cg);
+                c4.setAttribute("class",cp);
+            }
+            else if( mc==2 ){
+                pc3.innerHTML=comp2.nom;
+                c2.setAttribute("class",cp);
+                c4.setAttribute("class",cg);
+            }
+            else if( mc==3 ){
+                pc3.innerHTML="égal";
+            }
             pc1.innerHTML=el[0];
             pc2.innerHTML=el[1]+el[2];
             pc4.innerHTML=el[4]+el[5];
@@ -140,6 +169,32 @@ function makePage(id1,id2){
             
         }
         //
+        var le=document.createElement("tr");
+        var c1=document.createElement("td");
+        var c2=document.createElement("td");
+        var c3=document.createElement("td");
+        var c4=document.createElement("td");
+        c1.setAttribute("class","ce");
+        c2.setAttribute("class","ce");
+        c3.setAttribute("class","ce");
+        c4.setAttribute("class","ce");
+        var t1=document.createElement("p");
+        var t2=document.createElement("p");
+        var t3=document.createElement("p");
+        var t4=document.createElement("p");
+        t1.innnerHTML="Caractéristiques";
+        t2.innerHTML="Valeur de "+comp1.nom;
+        t3.innerHTML="Le meilleur";
+        t4.innerHTML="Valeur de "+comp2.nom;
+        c1.appendChild(t1);
+        c2.appendChild(t2);
+        c3.appendChild(t3);
+        c4.appendChild(t4);
+        le.appendChild(c1);
+        le.appendChild(c2);
+        le.appendChild(c3);
+        le.appendChild(c4);
+        table.appendChild(le);
         for(l of lignes){
             table.appendChild(l);
         }
