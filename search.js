@@ -18,6 +18,10 @@ function add_result_page( results ){
             d.setAttribute("class","result");
             d.setAttribute("onClick","Javascript:window.open('comp.html?composant="+r+"');");
             var comp=composants[r];
+            var d1=document.createElement("div");
+            d1.setAttribute("class","div_img");
+            var d2=document.createElement("div");
+            d2.setAttribute("class","div_texte");
             var titre=document.createElement("h2");
             titre.innerHTML=comp.nom;
             titre.setAttribute("class","txt1");
@@ -26,8 +30,10 @@ function add_result_page( results ){
             var img=document.createElement("img");
             img.setAttribute("src",comp.image);
             pp.appendChild(img);
-            d.appendChild(pp);
-            d.appendChild(titre);
+            d1.appendChild(pp);
+            d2.appendChild(titre);
+            d.appendChild(d1);
+            d.appendChild(d2);
             document.getElementById("divresults").appendChild(d);
         }
     }
@@ -52,5 +58,5 @@ function searche(){
     add_result_page( liste_comp );
 }
 
-nettoie_results();
+//nettoie_results();
 
