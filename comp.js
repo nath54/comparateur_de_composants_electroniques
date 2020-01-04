@@ -8,7 +8,24 @@ function makePage(id){
         var lignes=[];
         //
         if(comp.type=="cpu"){
-            var liste=[["Nom",comp.nom],["Marque",comp.marque],["Socket",comp.socket],["Micro-Architecture",comp.micro_architecture],["Nombre de coeurs",comp.nbcoeurs],["Nombre de threads",comp.nbthreads]];
+            var liste=[
+                ["Nom",comp.nom,""],
+                ["Prix",comp.prix," €"],
+                ["Marque",comp.marque,""],
+                ["Socket",comp.socket,""],
+                ["Micro-Architecture",comp.micro_architecture,""],
+                ["Nombre de coeurs",comp.nbcoeurs,""],
+                ["Nombre de threads",comp.nbthreads,""],
+                ["Frequence de base",comp.base_clock," Ghz"],
+                ["Frequence boot",comp.boost_clock," Ghz"],
+                ["Finnesse de gravure",comp.fin_gravure," nm"],
+                ["Cache L1",comp.cacheL1," KB"],
+                ["Cache L2",comp.cacheL2," MB"],
+                ["Cache L3",comp.cacheL3," MB"],
+                ["TDP",comp.TDP," W"],
+                ["Température Max",comp.temp_max," °C"],
+                ["Date de lancement",comp.date_lancement,""]
+            ];
             tpc="1"
             for(el of liste){
                 var ligne=document.createElement("tr");
@@ -27,7 +44,7 @@ function makePage(id){
                 var pc1=document.createElement("p");
                 var pc2=document.createElement("p");
                 pc1.innerHTML=el[0];
-                pc2.innerHTML=el[1];
+                pc2.innerHTML=el[1]+el[2];
                 c1.appendChild(pc1);
                 c2.appendChild(pc2);
                 ligne.appendChild(c1);
