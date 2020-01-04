@@ -77,6 +77,8 @@ function makePage(id1,id2){
                     else{ mc=3; }
                 }
                 else if(el[3]=="prix"){
+                    score1-=el[1];
+                    score2-=el[4];
                     if(el[1]<el[4]){ mc=1; }
                     else if(el[1]>el[4]){ mc=2; }
                     else{ mc=3; }
@@ -152,8 +154,8 @@ function makePage(id1,id2){
         div.appendChild(img2);
         div.append(table);
         //
-        score1=score1/comp1.prix;
-        score2=score2/comp2.prix;
+        //score1=score1/comp1.prix;
+        //score2=score2/comp2.prix;
         ts1=document.createElement("h2");
         ts1.innerHTML="score de "+comp1.nom+" : "+score1;
         ts2=document.createElement("h2");
