@@ -1,3 +1,33 @@
+@keyframes an_cl1{
+    0% { color:rgb(255,0,0); }
+    15% { color:rgb(255,255,0); }
+    30% { color:rgb(0,255,0); }
+    45% { color:rgb(0,255,255); }
+    60% { color:rgb(0,0,255); }
+    75% { color:rgb(255,0,255); }
+    100% { color:rgb(255,0,0); }
+}
+
+@keyframes an_cl2{
+    0% { background:rgb(255,0,0); }
+    15% { background:rgb(255,0,255); }
+    30% { background:rgb(0,0,255); }
+    45% { background:rgb(0,255,255); }
+    60% { background:rgb(0,255,0); }
+    75% { background:rgb(255,255,0); }
+    100% { background:rgb(255,0,0); }
+}
+
+@keyframes an_cl3{
+    0% { background:rgb(0,0,255); }
+    15% { background:rgb(0,255,255); }
+    30% { background:rgb(0,255,0); }
+    45% { background:rgb(255,255,0); }
+    60% { background:rgb(255,0,0); }
+    75% { background:rgb(255,0,255); }
+    100% { background:rgb(0,0,255); }
+}
+
 
 /*EFFET 1 */
 
@@ -110,6 +140,7 @@ html, body {
     
 .boton .botontext:nth-of-type(1) {
         color: #3d3b40;
+        animation:an_cl1 5s linear infinite;
         bottom: 100%;
         transform-origin: center bottom 0px; 
         transform: matrix3d(1, 0, 0, 0, 
@@ -132,6 +163,7 @@ html, body {
     
 .boton .botontext:nth-of-type(2) {
         color: rgb(0,200,200);
+        animation:an_cl1 5s linear infinite;
         top: 100%;
         transform-origin: center top 0px;
         transform: matrix3d(1, 0, 0, 0, 
@@ -162,4 +194,11 @@ canvas {
 }
 
 /* EFFET 3 */
+
+h1{
+    position:absolute;
+    left:33%;
+    top:10%;
+    animation:an_cl1 5s linear infinite;
+}
 

@@ -8,7 +8,8 @@ var cpu3={nom:"AMD Ryzen™ 3 1300X",type:"cpu",image:"imgs/r31300x.jpg",marque:
 //                                                              Mhz       Mhz           Gbps           GB           -bit            Go/sec                                      X Y FPS 
 var gpu={nom:"?",type:"gpu",image:"?",marque:"?",nb_cores:0,base_clock:0,boost_clock:0,vit_mem:0,taille_mem:0,taille_int_mem:0,bande_passante_mem:0,directX:0,vopengl:0,res_max:[0,0,0],connecteurs_aff:[],temp_max:0,consomation:0,connecteurs_alim_sup:"?"}
 
-var gpu1={nom:"NVIDAI GEFORCE GTX 1060 3GB",type:"gpu",image:"imgs/gtx1060.png",marque:"NVIDIA",nb_cores:1152,base_clock:1506,boost_clock:1708,vit_mem:8,taille_mem:3,taille_int_mem:192,bande_passante_mem:192,directX:12,vopengl:4.5,res_max:[7680,4320,60],connecteurs_aff:["Display Port 1.4","HDMI 2.0b","Dual Link-DVI"],temp_max:97,consomation:120,connecteurs_alim_sup:"6-pin",prix:129}
+var gpu1={nom:"NVIDAI GEFORCE GTX 1060 3GB",type:"gpu",image:"imgs/gtx1060.png",marque:"NVIDIA",architecure:"Pascal",nb_cores:1152,base_clock:1506,boost_clock:1708,vit_mem:8,taille_mem:3,taille_int_mem:192,bande_passante_mem:192,directX:12,vopengl:4.5,res_max:[7680,4320,60],connecteurs_aff:["Display Port 1.4","HDMI 2.0b","Dual Link-DVI"],temp_max:97,consomation:120,connecteurs_alim_sup:"6-pin",prix:129}
+var gpu2={nom:"NVIDAI GEFORCE GTX 1060 6GB",type:"gpu",image:"imgs/gtx1060.png",marque:"NVIDIA",architecure:"Pascal",nb_cores:1280,base_clock:1506,boost_clock:1708,vit_mem:8,taille_mem:6,taille_int_mem:192,bande_passante_mem:192,directX:12,vopengl:4.5,res_max:[7680,4320,60],connecteurs_aff:["Display Port 1.4","HDMI 2.0b","Dual Link-DVI"],temp_max:97,consomation:120,connecteurs_alim_sup:"6-pin",prix:129}
 
 
 const composants=[cpu1,cpu2,cpu3,gpu1];

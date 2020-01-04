@@ -35,6 +35,7 @@ function makePage(id){
                 ["Nom",comp.nom,""],
                 ["Prix",comp.prix," €"],
                 ["Marque",comp.marque,""],
+                ["Architecture",comp.architecture,""],
                 ["Nombre de coeurs",comp.nb_cores,""],
                 ["Fréquence de base",comp.base_clock," Mhz"],
                 ["Fréquence boost",comp.boost_clock," Mhz"],
