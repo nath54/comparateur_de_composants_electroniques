@@ -54,7 +54,8 @@ function makePage(id1,id2){
                 ["Connecteurs"                                  ,comp1.connecteurs_aff.join(",")                                    ,""         ,"len"  ,comp2.connecteurs_aff.join(",")                                    ,""         ],
                 ["Température maximale"                         ,comp1.temp_max                                                     ," °C"      ,"nb2"  ,comp2.temp_max                                                     ," °C"      ],
                 ["Consommation"                                 ,comp1.consomation                                                  ," W"       ,"nb2"  ,comp2.consomation                                                  ," W"       ],
-                ["Connecteurs d'alimentation supplémentaires "  ,comp2.connecteurs_alim_sup                                         ,""         ,false  ,comp1.connecteurs_alim_sup                                         ,""         ]
+                ["Connecteurs d'alimentation supplémentaires "  ,comp1.connecteurs_alim_sup                                         ,""         ,false  ,comp2.connecteurs_alim_sup                                         ,""         ],
+                ["Date de lancement"                            ,comp1.date                                                         ,""         ,"date" ,comp2.date                                                         ,""         ]
             ];
         }
         //
@@ -190,6 +191,7 @@ function makePage(id1,id2){
         c2.appendChild(t2);
         c3.appendChild(t3);
         c4.appendChild(t4);
+        //
         le.appendChild(c1);
         le.appendChild(c2);
         le.appendChild(c3);

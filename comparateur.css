@@ -58,5 +58,20 @@ td{
 .c22{
     background-color:rgb(200,200,200);
 }
-
+.cg1{
+	background-color:rgb(200,250,200);
+}
+.cg2{
+	background-color:rgb(150,200,150);
+}
+.cp1{
+	background-color:rgb(250,200,200);
+}
+.cp2{
+	background-color:rgb(200,150,150);
+}
+.ce{
+	background-color:rgb(200,200,200);
+	color:rgb(0,0,60);
+}
 
