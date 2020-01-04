@@ -1,0 +1,62 @@
+
+@-webkit-keyframes an_bg1 {
+    0%{background-position:57% 0%}
+    50%{background-position:44% 100%}
+    100%{background-position:57% 0%}
+}
+@-moz-keyframes an_bg1 {
+    0%{background-position:57% 0%}
+    50%{background-position:44% 100%}
+    100%{background-position:57% 0%}
+}
+@keyframes an_bg1 {
+    0%{background-position:57% 0%}
+    50%{background-position:44% 100%}
+    100%{background-position:57% 0%}
+}
+
+
+body{
+    background: linear-gradient(206deg, rgb(100,50,50), rgb(50,50,100));
+    -webkit-animation: an_bg1 10s ease infinite;
+    -moz-animation: an_bg1 10s ease infinite;
+    animation: an_bg1 10s ease infinite;
+}
+
+img{
+    height:200px;
+    border:1px solid black;
+}
+
+
+table{
+    border:2px solid black;
+    border-collapse: collapse;
+    width:80%;
+    margin-top:10px;
+    margin-right:10px;
+}
+
+tr,td{
+    border:1px solid black;
+    font-size:20px;
+    padding: 15px;
+    text-align: left;
+}
+td{
+}
+
+.c11{
+    background-color:rgb(250,250,200);
+}
+.c21{
+    background-color:rgb(250,250,250);
+}
+.c12{
+    background-color:rgb(200,200,150);
+}
+.c22{
+    background-color:rgb(200,200,200);
+}
+
+
