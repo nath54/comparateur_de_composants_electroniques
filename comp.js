@@ -9,47 +9,47 @@ function makePage(id){
         //
         if(comp.type=="cpu"){
             var liste=[
-                ["Type","Processeur",""],
-                ["Nom",comp.nom,""],
-                ["Prix",comp.prix," €"],
-                ["Marque",comp.marque,""],
-                ["Socket",comp.socket,""],
-                ["Micro-Architecture",comp.micro_architecture,""],
-                ["Nombre de coeurs",comp.nbcoeurs,""],
-                ["Nombre de threads",comp.nbthreads,""],
-                ["Frequence de base",comp.base_clock," Ghz"],
-                ["Frequence boot",comp.boost_clock," Ghz"],
-                ["Finnesse de gravure",comp.fin_gravure," nm"],
-                ["Cache L1",comp.cacheL1," KB"],
-                ["Cache L2",comp.cacheL2," MB"],
-                ["Cache L3",comp.cacheL3," MB"],
-                ["TDP",comp.TDP," W"],
-                ["Température Max",comp.temp_max," °C"],
-                ["Date de lancement",comp.date_lancement,""]
+                ["Type"                 ,"Processeur"           ,""     ],
+                ["Nom"                  ,comp.nom               ,""     ],
+                ["Prix"                 ,comp.prix,             " €"    ],
+                ["Marque"               ,comp.marque            ,""     ],
+                ["Chipset"              ,comp.socket            ,""     ],
+                ["Micro-Architecture"   ,comp.micro_architecture,""     ],
+                ["Type de mémoire RAM"  ,comp.type_ram          ,""     ],
+                ["Nombre de coeurs"     ,comp.nbcoeurs          ,""     ],
+                ["Nombre de threads"    ,comp.nbthreads         ,""     ],
+                ["Frequence de base"    ,comp.base_clock        ," Ghz" ],
+                ["Frequence boot"       ,comp.boost_clock       ," Ghz" ],
+                ["Finnesse de gravure"  ,comp.fin_gravure       ," nm"  ],
+                ["Cache L1"             ,comp.cacheL1           ," KB"  ],
+                ["Cache L2"             ,comp.cacheL2           ," MB"  ],
+                ["Cache L3"             ,comp.cacheL3           ," MB"  ],
+                ["TDP"                  ,comp.TDP               ," W"   ],
+                ["Température Max"      ,comp.temp_max          ," °C"  ],
+                ["Date de lancement"    ,comp.date_lancement    ,""     ]
             ];
         }
         //
         if(comp.type=="gpu"){
             var liste=[
-                ["Type","Carte Graphique",""],
-                ["Nom",comp.nom,""],
-                ["Prix",comp.prix," €"],
-                ["Marque",comp.marque,""],
-                ["Architecture",comp.architecture,""],
-                ["Nombre de coeurs",comp.nb_cores,""],
-                ["Fréquence de base",comp.base_clock," Mhz"],
-                ["Fréquence boost",comp.boost_clock," Mhz"],
-                ["Vitesse mémoire",comp.vit_mem," Gbps"],
-                ["Taille mémoire",comp.taille_mem," GB"],
-                ["Taille interface mémoire",comp.taille_int_mem,"-bit"],
-                ["Bande passante de ma mémoire",comp.bande_passante_mem," Go/sec"],
-                ["Derniere version de directX supportée",comp.directX,""],
-                ["Derniere version de opengl supportée",comp.vopengl,""],
-                ["Résolution Maximale",comp.res_max[0]+"x"+comp.res_max[1]+" à "+comp.res_max[2]+" Hz",""],
-                ["Connecteurs",comp.connecteurs_aff.join(","),""],
-                ["Température maximale",comp.temp_max," °C"],
-                ["Consommation",comp.consomation," W"],
-                ["Connecteurs d'alimentation supplémentaires ",comp.connecteurs_alim_sup,""]
+                ["Type"                                         ,"Carte Graphique"                                              ,""         ],
+                ["Nom"                                          ,comp.nom                                                       ,""         ],
+                ["Prix"                                         ,comp.prix                                                      ," €"       ],
+                ["Marque"                                       ,comp.marque                                                    ,""         ],
+                ["Architecture"                                 ,comp.architecture                                              ,""         ],
+                ["Nombre de coeurs"                             ,comp.nb_cores                                                  ,""         ],
+                ["Fréquence de base"                            ,comp.base_clock                                                ," Mhz"     ],
+                ["Fréquence boost"                              ,comp.boost_clock                                               ," Mhz"     ],
+                ["Taille mémoire"                               ,comp.taille_mem                                                ," GB"      ],
+                ["Taille interface mémoire"                     ,comp.taille_int_mem                                            ,"-bit"     ],
+                ["Bande passante de ma mémoire"                 ,comp.bande_passante_mem                                        ," Go/sec"  ],
+                ["Derniere version de directX supportée"        ,comp.directX                                                   ,""         ],
+                ["Derniere version de opengl supportée"         ,comp.vopengl                                                   ,""         ],
+                ["Résolution Maximale"                          ,comp.res_max[0]+"x"+comp.res_max[1]+" à "+comp.res_max[2]+" Hz",""         ],
+                ["Connecteurs"                                  ,comp.connecteurs_aff.join(",")                                 ,""         ],
+                ["Température maximale"                         ,comp.temp_max                                                  ," °C"      ],
+                ["Consommation"                                 ,comp.consomation                                               ," W"       ],
+                ["Connecteurs d'alimentation supplémentaires "  ,comp.connecteurs_alim_sup                                      ,""         ]
             ];
         }
         //

@@ -17,8 +17,9 @@ function makePage(id1,id2){
                 ["Nom"                  ,comp1.nom                  ,""     ,false  ,comp2.nom                  ,""     ],
                 ["Prix"                 ,comp1.prix                 ," €"   ,"nb2"  ,comp2.prix                 ," €"   ],
                 ["Marque"               ,comp1.marque               ,""     ,false  ,comp2.marque               ,""     ],
-                ["Socket"               ,comp1.socket               ,""     ,false  ,comp2.socket               ,""     ],
+                ["Chipset"              ,comp1.socket               ,""     ,false  ,comp2.socket               ,""     ],
                 ["Micro-Architecture"   ,comp1.micro_architecture   ,""     ,false  ,comp2.micro_architecture   ,""     ],
+                ["Type de mémore RAM"   ,comp1.type_ram             ,""     ,"ram"  ,comp2.type_ram             ,""     ],
                 ["Nombre de coeurs"     ,comp1.nbcoeurs             ,""     ,"nb"   ,comp2.nbcoeurs             ,""     ],
                 ["Nombre de threads"    ,comp1.nbthreads            ,""     ,"nb"   ,comp2.nbthreads            ,""     ],
                 ["Frequence de base"    ,comp1.base_clock           ," Ghz" ,"nb"   ,comp2.base_clock           ," Ghz" ],
@@ -28,7 +29,7 @@ function makePage(id1,id2){
                 ["Cache L2"             ,comp1.cacheL2              ," MB"  ,"nb"   ,comp2.cacheL2              ," MB"  ],
                 ["Cache L3"             ,comp1.cacheL3              ," MB"  ,"nb"   ,comp2.cacheL3              ," MB"  ],
                 ["TDP"                  ,comp1.TDP                  ," W"   ,"nb2"  ,comp2.TDP                  ," W"   ],
-                ["Température Max"      ,comp1.temp_max             ," °C"  ,"nb2"  ,comp2.temp_max             ," °C"  ],
+                ["Température Max"      ,comp1.temp_max             ," °C"  ,"nb"   ,comp2.temp_max             ," °C"  ],
                 ["Date de lancement"    ,comp1.date_lancement       ,""     ,"date" ,comp2.date_lancement       ,""     ]
             ];
         }
@@ -38,19 +39,18 @@ function makePage(id1,id2){
             var liste=[
                 ["Type"                                         ,"Carte Graphique"                                                  ,""         ,false  ,"Carte Graphique"                                                  ,""         ],
                 ["Nom"                                          ,comp1.nom                                                          ,""         ,false  ,comp2.nom                                                          ,""         ],
-                ["Prix"                                         ,comp1.prix                                                         ," €"       ,"nb2" ,comp2.prix                                                         ," €"       ],
+                ["Prix"                                         ,comp1.prix                                                         ," €"       ,"nb2"  ,comp2.prix                                                         ," €"       ],
                 ["Marque"                                       ,comp1.marque                                                       ,""         ,false  ,comp2.marque                                                       ,""         ],
-                ["Architecture"                                 ,comp1.architecture                                                 ,""         ,false  ,comp2.architecture                                                 ,""         ],
+                ["Architecture"                                 ,comp1.architecture                                                 ,""         ,"archi",comp2.architecture                                                 ,""         ],
                 ["Nombre de coeurs"                             ,comp1.nb_cores                                                     ,""         ,"nb"   ,comp2.nb_cores                                                     ,""         ],
                 ["Fréquence de base"                            ,comp1.base_clock                                                   ," Mhz"     ,"nb"   ,comp2.base_clock                                                   ," Mhz"     ],
                 ["Fréquence boost"                              ,comp1.boost_clock                                                  ," Mhz"     ,"nb"   ,comp2.boost_clock                                                  ," Mhz"     ],
-                ["Vitesse mémoire"                              ,comp1.vit_mem                                                      ," Gbps"    ,"nb"   ,comp2.vit_mem                                                      ," Gbps"    ],
                 ["Taille mémoire"                               ,comp1.taille_mem                                                   ," GB"      ,"nb"   ,comp2.taille_mem                                                   ," GB"      ],
                 ["Taille interface mémoire"                     ,comp1.taille_int_mem                                               ,"-bit"     ,"nb"   ,comp2.taille_int_mem                                               ,"-bit"     ],
                 ["Bande passante de ma mémoire"                 ,comp1.bande_passante_mem                                           ," Go/sec"  ,"nb"   ,comp2.bande_passante_mem                                           ," Go/sec"  ],
                 ["Derniere version de directX supportée"        ,comp1.directX                                                      ,""         ,"nb"   ,comp2.directX                                                      ,""         ],
                 ["Derniere version de opengl supportée"         ,comp1.vopengl                                                      ,""         ,"nb"   ,comp2.vopengl                                                      ,""         ],
-                ["Résolution Maximale"                          ,comp1.res_max[0]+"x"+comp1.res_max[1]+" à "+comp2.res_max[2]+" Hz" ,""         ,"res"  ,comp2.res_max[0]+"x"+comp2.res_max[1]+" à "+comp1.res_max[2]+" Hz" ,""         ],
+                //["Résolution Maximale"                          ,comp1.res_max[0]+"x"+comp1.res_max[1]+" à "+comp1.res_max[2]+" Hz" ,""         ,"res"  ,comp2.res_max[0]+"x"+comp2.res_max[1]+" à "+comp2.res_max[2]+" Hz" ,""         ],
                 ["Connecteurs"                                  ,comp1.connecteurs_aff.join(",")                                    ,""         ,"len"  ,comp2.connecteurs_aff.join(",")                                    ,""         ],
                 ["Température maximale"                         ,comp1.temp_max                                                     ," °C"      ,"nb2"  ,comp2.temp_max                                                     ," °C"      ],
                 ["Consommation"                                 ,comp1.consomation                                                  ," W"       ,"nb2"  ,comp2.consomation                                                  ," W"       ],
@@ -61,8 +61,9 @@ function makePage(id1,id2){
         //
         tpc="1"
         for(el of liste){
+          if( !(el[1]==null ||  el[4]==null)    ){
             var mc=0; //0=pas comparé 1=comp1 est meilleur 2=comp2 est meilleur 3=égalité
-            if(! el[3]==false ){
+            if(! el[3]==false){
                 if(el[3]=="nb"){    
                     score1+=el[1];
                     score2+=el[4];
@@ -111,6 +112,34 @@ function makePage(id1,id2){
                     }
                     else{
                         mc=3;
+                    }
+                }
+                else if(el[3]=="ram"){
+                    score1+=list_ram.indexOf(el[1]);
+                    score2+=list_ram.indexOf(el[4]);
+                    if( list_ram.indexOf(el[1]) > list_ram.indexOf(el[4]) ){
+                        mc=1;
+                    }
+                    else if( list_ram.indexOf(el[1]) < list_ram.indexOf(el[4]) ){
+                        mc=2;
+                    }
+                    else{
+                        mc=3;
+                    }
+                }
+                else if(el[3]=="archi"){
+                    if(comp1.marque==comp2.marque && comp1.marque=="NVIDIA"){
+                        score1+=list_garchin.indexOf(el[1]);
+                        score2+=list_garchin.indexOf(el[4]);
+                        if( list_garchin.indexOf(el[1]) > list_garchin.indexOf(el[4]) ){
+                            mc=1;
+                        }
+                        else if( list_garchin.indexOf(el[1]) < list_garchin.indexOf(el[4]) ){
+                            mc=2;
+                        }
+                        else{
+                            mc=3;
+                        }
                     }
                 }
             }
@@ -167,7 +196,7 @@ function makePage(id1,id2){
             ligne.appendChild(c3);
             ligne.appendChild(c4);
             lignes.push(ligne);
-            
+          }
         }
         //
         var le=document.createElement("tr");
