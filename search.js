@@ -6,10 +6,10 @@ function nettoie_results(){
     enfants=boite.childNodes;
     for(e of enfants){
         // La liste n'est pas une copie, elle sera donc réindexée à chaque appel
-        //alert(e.id);
-        if(! e.id == "comparateur"){
-            boite.removeChild(e);
-        }
+        boite.removeChild(e);
+    }
+    while(boite.firstChild){
+        boite.removeChild(boite.firstChild);
     }
 }
 

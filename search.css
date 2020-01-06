@@ -38,7 +38,7 @@
 }
 
 
-#divresults{
+#divr{
     overflow-y:scroll;
     height:100%;
 }
@@ -88,7 +88,7 @@ img{
     border-bottom-left-radius:20px;
 }
 
-#divresults{
+#divr{
     margin:auto;
 }
 
