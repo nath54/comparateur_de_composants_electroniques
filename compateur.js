@@ -58,6 +58,13 @@ function makePage(id1,id2){
                 ["Date de lancement"                            ,comp1.date                                                         ,""         ,"date" ,comp2.date                                                         ,""         ]
             ];
         }
+        if(comp1.type=="mb"){
+            liste=[
+                ["Type"         ,"Carte mère"        ,""      ,false    ,"Carte mère"       ,""     ],
+                ["Nom"          ,comp1.nom           ,""      ,false    ,comp2.nom          ,""     ],
+                ["Prix"         ,comp1.prix          ,""      ,"nb2"    ,comp2.prix         ,""     ]
+            ];
+        }
         //
         tpc="1"
         for(el of liste){
