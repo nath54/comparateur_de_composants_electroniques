@@ -59,11 +59,78 @@ function makePage(id1,id2){
             ];
         }
         if(comp1.type=="mb"){
-            liste=[
-                ["Type"         ,"Carte mère"        ,""      ,false    ,"Carte mère"       ,""     ],
-                ["Nom"          ,comp1.nom           ,""      ,false    ,comp2.nom          ,""     ],
-                ["Prix"         ,comp1.prix          ,""      ,"nb2"    ,comp2.prix         ,""     ]
+            var liste=[
+                ["Type"                             ,"Carte mère"                  ,""      ,false    ,"Carte mère"                 ,""     ],
+                ["Nom"                              ,comp1.nom                     ,""      ,false    ,comp2.nom                    ,""     ],
+                ["Marque"                           ,comp1.marque                  ,""      ,false    ,comp2.marque                 ,""     ],
+                ["Prix"                             ,comp1.prix                    ,"€"     ,"nb2"    ,comp2.prix                   ,"€"    ],
+                ["Format"                           ,comp1.format                  ,""      ,"mbf"    ,comp2.format                 ,""     ],
+                ["Socket"                           ,comp1.socket                  ,""      ,false    ,comp2.socket                 ,""     ],
+                ["Chipset"                          ,comp1.chipset                 ,""      ,false    ,comp2.chipset                ,""     ],
+                ["Nombre de cpu"                    ,comp1.nbcpu                   ,""      ,"nb"     ,comp2.nbcpu                  ,""     ],
+                ["Format memoire RAM"               ,comp1.fmem                    ,""      ,"ram"    ,comp2.fmem                   ,""     ],
+                ["Nombre max de barrettes de ram"   ,comp1.nbram                   ,""      ,"nb"     ,comp2.nbram                  ,""     ],
+                ["Frequence max"                    ,comp1.fmaxram                 ,""      ,"nb"     ,comp2.fmaxram                ,""     ],
+                ["Taille max d'une barrette de ram" ,comp1.capmaxmemslot           ,"Go"    ,"nb"     ,comp2.capmaxmemslot          ,"Go"   ],
+                ["Taille maximale de ram totale"    ,comp1.capmaxmemtot            ,"Go"    ,"nb"     ,comp2.capmaxmemtot           ,"Go"   ],
+                ["Connectiques"                     ,comp1.connectiques.join(",")  ,""      ,false    ,comp2.connectiques.join(",") ,""     ]
             ];
+        }
+        if(comp1.type=="ram"){
+            var liste=[
+                ["Type"                             ,"Barrete(s) de ram"           ,""      ,false    ,"Barrete(s) de ram"          ,""     ],
+                ["Nom"                              ,comp1.nom                     ,""      ,false    ,comp2.nom                    ,""     ],
+                ["Marque"                           ,comp1.marque                  ,""      ,false    ,comp2.marque                 ,""     ],
+                ["Prix"                             ,comp1.prix                    ,"€"     ,"nb2"    ,comp2.prix                   ,"€"    ]
+            ]
+        }
+        if(comp1.type=="fan"){
+            var liste=[
+                ["Type"                             ,"Barrete(s) de ram"           ,""      ,false    ,"Barrete(s) de ram"          ,""     ],
+                ["Nom"                              ,comp1.nom                     ,""      ,false    ,comp2.nom                    ,""     ],
+                ["Marque"                           ,comp1.marque                  ,""      ,false    ,comp2.marque                 ,""     ],
+                ["Prix"                             ,comp1.prix                    ,"€"     ,"nb2"    ,comp2.prix                   ,"€"    ]
+            ]
+        }
+        if(comp1.type=="ventirad"){
+            var liste=[
+                ["Type"                             ,"Barrete(s) de ram"           ,""      ,false    ,"Barrete(s) de ram"          ,""     ],
+                ["Nom"                              ,comp1.nom                     ,""      ,false    ,comp2.nom                    ,""     ],
+                ["Marque"                           ,comp1.marque                  ,""      ,false    ,comp2.marque                 ,""     ],
+                ["Prix"                             ,comp1.prix                    ,"€"     ,"nb2"    ,comp2.prix                   ,"€"    ]
+            ]
+        }
+        if(comp1.type=="water-cooling"){
+            var liste=[
+                ["Type"                             ,"Barrete(s) de ram"           ,""      ,false    ,"Barrete(s) de ram"          ,""     ],
+                ["Nom"                              ,comp1.nom                     ,""      ,false    ,comp2.nom                    ,""     ],
+                ["Marque"                           ,comp1.marque                  ,""      ,false    ,comp2.marque                 ,""     ],
+                ["Prix"                             ,comp1.prix                    ,"€"     ,"nb2"    ,comp2.prix                   ,"€"    ]
+            ]
+        }
+        if(comp1.type=="alim"){
+            var liste=[
+                ["Type"                             ,"Barrete(s) de ram"           ,""      ,false    ,"Barrete(s) de ram"          ,""     ],
+                ["Nom"                              ,comp1.nom                     ,""      ,false    ,comp2.nom                    ,""     ],
+                ["Marque"                           ,comp1.marque                  ,""      ,false    ,comp2.marque                 ,""     ],
+                ["Prix"                             ,comp1.prix                    ,"€"     ,"nb2"    ,comp2.prix                   ,"€"    ]
+            ]
+        }
+        if(comp1.type=="boitier"){
+            var liste=[
+                ["Type"                             ,"Barrete(s) de ram"           ,""      ,false    ,"Barrete(s) de ram"          ,""     ],
+                ["Nom"                              ,comp1.nom                     ,""      ,false    ,comp2.nom                    ,""     ],
+                ["Marque"                           ,comp1.marque                  ,""      ,false    ,comp2.marque                 ,""     ],
+                ["Prix"                             ,comp1.prix                    ,"€"     ,"nb2"    ,comp2.prix                   ,"€"    ]
+            ]
+        }
+        if(comp1.type=="stockage"){
+            var liste=[
+                ["Type"                             ,"Barrete(s) de ram"           ,""      ,false    ,"Barrete(s) de ram"          ,""     ],
+                ["Nom"                              ,comp1.nom                     ,""      ,false    ,comp2.nom                    ,""     ],
+                ["Marque"                           ,comp1.marque                  ,""      ,false    ,comp2.marque                 ,""     ],
+                ["Prix"                             ,comp1.prix                    ,"€"     ,"nb2"    ,comp2.prix                   ,"€"    ]
+            ]
         }
         //
         tpc="1"
