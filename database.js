@@ -18,7 +18,7 @@ var gpu3={nom:"NVIDIA Titan RTX",type:"gpu",image:"imgs/titanrtx.webp",marque:"N
 var gpu4={nom:"NVIDIA Geforce GTX titan Xp",type:"gpu",image:"?",marque:"NVIDIA",architecture:"Pascal",nb_cores:0,base_clock:0,boost_clock:0,vit_mem:0,taille_mem:12,taille_int_mem:0,bande_passante_mem:0,directX:12,vopengl:4.5,res_max:[0,0,0],connecteurs_aff:[],temp_max:0,consomation:0,connecteurs_alim_sup:"8-pin + 6-pin",date:"?",prix:0};
 
 //
-var mb={nom:"",type:"mb",image:"",marque:"",socket:"",chipset:"",format:"",nbcpu:0,nbmaxram:0,fmem:"",vitmaxmem:0,capmaxmemslot:0,capmaxmemtot:0,connectiques=[],prix:0};
+var mb={nom:"",type:"mb",image:"",marque:"",socket:"",chipset:"",format:"",nbcpu:0,nbmaxram:0,fmem:"",vitmaxmem:0,capmaxmemslot:0,capmaxmemtot:0,connectiques:[],prix:0};
 
 //
 var ram={nom:"",type:"ram",image:"",marque:"",type_ram:"",freq_max:0,cl:0,nbbar:0,taillebar:0,tailletot:0,prix:0};
