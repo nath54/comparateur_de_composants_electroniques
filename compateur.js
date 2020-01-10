@@ -63,7 +63,7 @@ function makePage(id1,id2){
                 ["Type"                             ,"Carte mère"                  ,""      ,false    ,"Carte mère"                 ,""     ],
                 ["Nom"                              ,comp1.nom                     ,""      ,false    ,comp2.nom                    ,""     ],
                 ["Marque"                           ,comp1.marque                  ,""      ,false    ,comp2.marque                 ,""     ],
-                ["Prix"                             ,comp1.prix                    ,"€"     ,"nb2"    ,comp2.prix                   ,"€"    ],
+                ["Prix"                             ,comp1.prix                    ," €"    ,"nb2"    ,comp2.prix                   ," €"   ],
                 ["Format"                           ,comp1.format                  ,""      ,"mbf"    ,comp2.format                 ,""     ],
                 ["Socket"                           ,comp1.socket                  ,""      ,false    ,comp2.socket                 ,""     ],
                 ["Chipset"                          ,comp1.chipset                 ,""      ,false    ,comp2.chipset                ,""     ],
@@ -71,8 +71,8 @@ function makePage(id1,id2){
                 ["Format memoire RAM"               ,comp1.fmem                    ,""      ,"ram"    ,comp2.fmem                   ,""     ],
                 ["Nombre max de barrettes de ram"   ,comp1.nbram                   ,""      ,"nb"     ,comp2.nbram                  ,""     ],
                 ["Frequence max"                    ,comp1.fmaxram                 ,""      ,"nb"     ,comp2.fmaxram                ,""     ],
-                ["Taille max d'une barrette de ram" ,comp1.capmaxmemslot           ,"Go"    ,"nb"     ,comp2.capmaxmemslot          ,"Go"   ],
-                ["Taille maximale de ram totale"    ,comp1.capmaxmemtot            ,"Go"    ,"nb"     ,comp2.capmaxmemtot           ,"Go"   ],
+                ["Taille max d'une barrette de ram" ,comp1.capmaxmemslot           ," Go"   ,"nb"     ,comp2.capmaxmemslot          ," Go"  ],
+                ["Taille maximale de ram totale"    ,comp1.capmaxmemtot            ," Go"   ,"nb"     ,comp2.capmaxmemtot           ," Go"  ],
                 ["Connectiques"                     ,comp1.connectiques.join(",")  ,""      ,false    ,comp2.connectiques.join(",") ,""     ]
             ];
         }
@@ -81,7 +81,14 @@ function makePage(id1,id2){
                 ["Type"                             ,"Barrete(s) de ram"           ,""      ,false    ,"Barrete(s) de ram"          ,""     ],
                 ["Nom"                              ,comp1.nom                     ,""      ,false    ,comp2.nom                    ,""     ],
                 ["Marque"                           ,comp1.marque                  ,""      ,false    ,comp2.marque                 ,""     ],
-                ["Prix"                             ,comp1.prix                    ,"€"     ,"nb2"    ,comp2.prix                   ,"€"    ]
+                ["Prix"                             ,comp1.prix                    ," €"    ,"nb2"    ,comp2.prix                   ," €"   ],
+                ["format de RAM"                    ,comp1.typeram                 ,""      ,"ram"    ,comp2.typeram                ,""     ],
+                ["Fréquence max"                    ,comp1.freqmax                 ," MHz"  ,"nb"     ,comp2.freqmax                ," MHz" ],
+                ["Latence CAS"                      ,comp1.cl                      ,""      ,"nb2"    ,comp2.cl                     ,""     ],
+                ["Nombre de barretes"               ,comp1.nbbar                   ,""      ,"nb"     ,comp2.nbbar                  ,""     ],
+                ["Capacité d'une barrete"           ,comp1.taillebar               ," Go"   ,"nb"     ,comp2.taillebar              ," Go"  ],
+                ["Capacité totale"                  ,comp1.tailletot               ," Go"   ,"nb"     ,comp2.tailletot              ," Go"  ]
+                
             ]
         }
         if(comp1.type=="fan"){
@@ -89,7 +96,12 @@ function makePage(id1,id2){
                 ["Type"                             ,"Barrete(s) de ram"           ,""      ,false    ,"Barrete(s) de ram"          ,""     ],
                 ["Nom"                              ,comp1.nom                     ,""      ,false    ,comp2.nom                    ,""     ],
                 ["Marque"                           ,comp1.marque                  ,""      ,false    ,comp2.marque                 ,""     ],
-                ["Prix"                             ,comp1.prix                    ,"€"     ,"nb2"    ,comp2.prix                   ,"€"    ]
+                ["Prix"                             ,comp1.prix                    ," €"    ,"nb2"    ,comp2.prix                   ," €"   ],
+                ["Taille"                           ,comp1.taille                  ," mm"   ,"nb"     ,comp2.taille                 ," mm"  ],
+                ["Minimum de rotation par minutes"  ,comp1.minrpm                  ," rpm"  ,"nb"     ,comp2.minrpm                 ," rpm" ],
+                ["Maximum de rotation par minutes"  ,comp1.maxrpm                  ," rpm"  ,"nb"     ,comp2.maxrpm                 ," rpm" ],
+                ["Nombre de pins sur le cable"      ,comp1.nbpins                  ," pins" ,"nb"     ,comp2.nbpins                 ," pins"],
+                ["Maximum de decibels"              ,comp1.nivsonmax               ," db"   ,"nb2"    ,comp2.nivsonmax              ," db"  ]
             ]
         }
         if(comp1.type=="ventirad"){
@@ -97,7 +109,7 @@ function makePage(id1,id2){
                 ["Type"                             ,"Barrete(s) de ram"           ,""      ,false    ,"Barrete(s) de ram"          ,""     ],
                 ["Nom"                              ,comp1.nom                     ,""      ,false    ,comp2.nom                    ,""     ],
                 ["Marque"                           ,comp1.marque                  ,""      ,false    ,comp2.marque                 ,""     ],
-                ["Prix"                             ,comp1.prix                    ,"€"     ,"nb2"    ,comp2.prix                   ,"€"    ]
+                ["Prix"                             ,comp1.prix                    ," €"    ,"nb2"    ,comp2.prix                   ," €"   ]
             ]
         }
         if(comp1.type=="water-cooling"){
@@ -105,7 +117,7 @@ function makePage(id1,id2){
                 ["Type"                             ,"Barrete(s) de ram"           ,""      ,false    ,"Barrete(s) de ram"          ,""     ],
                 ["Nom"                              ,comp1.nom                     ,""      ,false    ,comp2.nom                    ,""     ],
                 ["Marque"                           ,comp1.marque                  ,""      ,false    ,comp2.marque                 ,""     ],
-                ["Prix"                             ,comp1.prix                    ,"€"     ,"nb2"    ,comp2.prix                   ,"€"    ]
+                ["Prix"                             ,comp1.prix                    ," €"    ,"nb2"    ,comp2.prix                   ," €"   ]
             ]
         }
         if(comp1.type=="alim"){
@@ -113,7 +125,7 @@ function makePage(id1,id2){
                 ["Type"                             ,"Barrete(s) de ram"           ,""      ,false    ,"Barrete(s) de ram"          ,""     ],
                 ["Nom"                              ,comp1.nom                     ,""      ,false    ,comp2.nom                    ,""     ],
                 ["Marque"                           ,comp1.marque                  ,""      ,false    ,comp2.marque                 ,""     ],
-                ["Prix"                             ,comp1.prix                    ,"€"     ,"nb2"    ,comp2.prix                   ,"€"    ]
+                ["Prix"                             ,comp1.prix                    ," €"    ,"nb2"    ,comp2.prix                   ," €"   ]
             ]
         }
         if(comp1.type=="boitier"){
@@ -121,7 +133,7 @@ function makePage(id1,id2){
                 ["Type"                             ,"Barrete(s) de ram"           ,""      ,false    ,"Barrete(s) de ram"          ,""     ],
                 ["Nom"                              ,comp1.nom                     ,""      ,false    ,comp2.nom                    ,""     ],
                 ["Marque"                           ,comp1.marque                  ,""      ,false    ,comp2.marque                 ,""     ],
-                ["Prix"                             ,comp1.prix                    ,"€"     ,"nb2"    ,comp2.prix                   ,"€"    ]
+                ["Prix"                             ,comp1.prix                    ," €"    ,"nb2"    ,comp2.prix                   ," €"   ]
             ]
         }
         if(comp1.type=="stockage"){
@@ -129,7 +141,7 @@ function makePage(id1,id2){
                 ["Type"                             ,"Barrete(s) de ram"           ,""      ,false    ,"Barrete(s) de ram"          ,""     ],
                 ["Nom"                              ,comp1.nom                     ,""      ,false    ,comp2.nom                    ,""     ],
                 ["Marque"                           ,comp1.marque                  ,""      ,false    ,comp2.marque                 ,""     ],
-                ["Prix"                             ,comp1.prix                    ,"€"     ,"nb2"    ,comp2.prix                   ,"€"    ]
+                ["Prix"                             ,comp1.prix                    ," €"    ,"nb2"    ,comp2.prix                   ," €"   ]
             ]
         }
         //

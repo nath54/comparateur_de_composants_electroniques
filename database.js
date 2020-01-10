@@ -21,7 +21,7 @@ var gpu4={nom:"NVIDIA Geforce GTX titan Xp",type:"gpu",image:"?",marque:"NVIDIA"
 var mb={nom:"",type:"mb",image:"",marque:"",socket:"",chipset:"",format:"",nbcpu:0,nbmaxram:0,fmem:"",vitmaxmem:0,capmaxmemslot:0,capmaxmemtot:0,connectiques:[],prix:0};
 
 //
-var ram={nom:"",type:"ram",image:"",marque:"",type_ram:"",freq_max:0,cl:0,nbbar:0,taillebar:0,tailletot:0,prix:0};
+var ram={nom:"",type:"ram",image:"",marque:"",typeram:"",freqmax:0,cl:0,nbbar:0,taillebar:0,tailletot:0,prix:0};
 
 //
 var fan={nom:"",type:"fan",image:"",marque:"",taille:0,minrpm:0,maxrpm:0,nbpin:0,nivsonmax:0,prix:0};
