@@ -16,12 +16,12 @@ var w = c.width = window.innerWidth,
     h = c.height = window.innerHeight,
     ctx = c.getContext( '2d' ),
     
-    minDist = 10,
-    maxDist = 30,
-    initialWidth = 10,
+    minDist = 5,
+    maxDist = 50,
+    initialWidth = 6,
     maxLines = 100,
-    initialLines = 4,
-    speed = 5,
+    initialLines = 20,
+    speed = 6,
     
     lines = [],
     frame = 0,
@@ -32,12 +32,12 @@ var w = c.width = window.innerWidth,
       [ 0, 1 ],
       [ 1, 0 ],
       [ 0, -1 ],
-    	[ -1, 0 ],
+    	[ -1, 0 ]/*,
    // diagonals, 0.7 = sin(PI/4) = cos(PI/4)
       [ .7, .7 ],
       [ .7, -.7 ],
       [ -.7, .7 ],
-      [ -.7, -.7]
+      [ -.7, -.7]*/
     ],
     starter = { // starting parent line, just a pseudo line
       
