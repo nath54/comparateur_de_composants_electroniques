@@ -44,7 +44,7 @@ var boitier={nom:"",type:"boitier",image:"",marque:"",tmbmax:"",nbmax_v:0,v_int:
 var stocks={nom:"",type:"stockage",image:"",marque:"",type_stock:"",branchement:"",capacite:0,vit_read:0,vit_write:0,isnvme:0};
 
 //
-const composants=[cpu1,cpu2,cpu3,gpu1,gpu2,cpu4,gpu3,gpu4,mb1];
+const composants=[cpu1,cpu2,cpu3,gpu1,gpu2,cpu4,gpu3,gpu4,mb1,mb2];
 
 
 const list_ram=["DDR1","DDR2","DDR3","DDR4"];
