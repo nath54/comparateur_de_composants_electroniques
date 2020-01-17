@@ -19,7 +19,8 @@ var gpu4={nom:"NVIDIA Geforce GTX titan Xp",type:"gpu",image:"https://www.fredzo
 
 //
 var mb={nom:"",type:"mb",image:"",marque:"",socket:"",chipset:"",format:"",nbcpu:0,nbmaxram:0,fmem:"",vitmaxmem:0,capmaxmemslot:0,capmaxmemtot:0,connectiques:[],prix:0};
-var mb1={nom:"MSI MPG X570 GAMING PLUS",type:"mb",image:"https://asset.msi.com/resize/image/global/product/product_10_20190527093853_5ceb3fad643f4.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",marque:"MSI",socket:"AM4",chipset:"X570",format:"ATX",nbcpu:1,nbmaxram:4,fmem:"DDR4",vitmaxmem:4400,capmaxmemslot:128,capmaxmemtot:null,connectiques:[],prix:180};
+var mb1={nom:"MSI MPG X570 GAMING PLUS",type:"mb",image:"https://asset.msi.com/resize/image/global/product/product_10_20190527093853_5ceb3fad643f4.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",marque:"MSI",socket:"AM4",chipset:"X570",format:"ATX",nbcpu:1,nbmaxram:4,fmem:"DDR4",vitmaxmem:4400,capmaxmemslot:null,capmaxmemtot:128,connectiques:[],prix:180};
+var mb2={nom:"B450 GAMING PLUS",type:"mb",image:"https://asset.msi.com/resize/image/global/product/product_3_20180716112125_5b4c0f3535ada.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",marque:"MSI",socket:"AM4",chipset:"B450",format:"",nbcpu:1,nbmaxram:4,fmem:"DDR4",vitmaxmem:3466,capmaxmemslot:null,capmaxmemtot:64,connectiques:[],prix:108.46};
 //
 var ram={nom:"",type:"ram",image:"",marque:"",typeram:"",freqmax:0,cl:0,nbbar:0,taillebar:0,tailletot:0,prix:0};
 
