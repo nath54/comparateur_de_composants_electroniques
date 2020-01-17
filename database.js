@@ -33,7 +33,7 @@ var aircool={nom:"",type:"ventirad",image:"",marque:"",dim:[],nbvent:0,taille_ve
 var watercool={nom:"",type:"water-cooling",image:"",marque:"",nbvent:0,prix:0};
 
 //
-var alim={nom:"",type:"alim",image:"",marque:"",watts:0,prix:0};
+var alim={nom:"",type:"alim",image:"",marque:"",watts:0,certification:"",prix:0};
 
 //
 var boitier={nom:"",type:"boitier",image:"",marque:"",tmbmax:"",nbmax_v:0,v_int:0,dimensions:[0,0,0],prix:0};
