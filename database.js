@@ -15,7 +15,7 @@ var gpu={nom:"?",type:"gpu",image:"?",marque:"?",architecture:"?",nb_cores:0,bas
 var gpu1={nom:"NVIDIA GEFORCE GTX 1060 3GB",type:"gpu",image:"imgs/gtx1060.png",marque:"NVIDIA",architecture:"Pascal",nb_cores:1152,base_clock:1506,boost_clock:1708,taille_mem:3,taille_int_mem:192,bande_passante_mem:192,directX:12,vopengl:4.5,res_max:[7680,4320,60],connecteurs_aff:["Display Port 1.4","HDMI 2.0b","Dual Link-DVI"],temp_max:97,consomation:120,connecteurs_alim_sup:"6-pin",date:"19/07/2016",prix:129};
 var gpu2={nom:"NVIDIA GEFORCE GTX 1060 6GB",type:"gpu",image:"imgs/gtx1060.png",marque:"NVIDIA",architecture:"Pascal",nb_cores:1280,base_clock:1506,boost_clock:1708,taille_mem:6,taille_int_mem:192,bande_passante_mem:192,directX:12,vopengl:4.5,res_max:[7680,4320,60],connecteurs_aff:["Display Port 1.4","HDMI 2.0b","Dual Link-DVI"],temp_max:97,consomation:120,connecteurs_alim_sup:"6-pin",date:"19/07/2016",prix:129};
 var gpu3={nom:"NVIDIA Titan RTX",type:"gpu",image:"imgs/titanrtx.webp",marque:"NVIDIA",architecture:"Turing",nb_cores:4352,base_clock:1350,boost_clock:1770,taille_mem:24,taille_int_mem:384,bande_passante_mem:672,directX:12,vopengl:4.6,res_max:null,connecteurs_aff:["DisplayPort","DisplayPort","DisplayPort","DisplayPort USB Type C","HDMI"],temp_max:89,consomation:280,connecteurs_alim_sup:"2x8-pin",date:"?",prix:2699};
-var gpu4={nom:"NVIDIA Geforce GTX titan Xp",type:"gpu",image:"?",marque:"NVIDIA",architecture:"Pascal",nb_cores:0,base_clock:0,boost_clock:0,vit_mem:0,taille_mem:12,taille_int_mem:0,bande_passante_mem:0,directX:12,vopengl:4.5,res_max:[0,0,0],connecteurs_aff:[],temp_max:0,consomation:0,connecteurs_alim_sup:"8-pin + 6-pin",date:"?",prix:0};
+var gpu4={nom:"NVIDIA Geforce GTX titan Xp",type:"gpu",image:"?",marque:"NVIDIA",architecture:"Pascal",nb_cores:null,base_clock:null,boost_clock:null,vit_mem:null,taille_mem:12,taille_int_mem:null,bande_passante_mem:null,directX:12,vopengl:4.5,res_max:[0,0,0],connecteurs_aff:[],temp_max:0,consomation:0,connecteurs_alim_sup:"8-pin + 6-pin",date:"?",prix:1200};
 
 //
 var mb={nom:"",type:"mb",image:"",marque:"",socket:"",chipset:"",format:"",nbcpu:0,nbmaxram:0,fmem:"",vitmaxmem:0,capmaxmemslot:0,capmaxmemtot:0,connectiques:[],prix:0};
@@ -43,7 +43,7 @@ var boitier={nom:"",type:"boitier",image:"",marque:"",tmbmax:"",nbmax_v:0,v_int:
 var stocks={nom:"",type:"stockage",image:"",marque:"",type_stock:"",branchement:"",capacite:0,vit_read:0,vit_write:0,isnvme:0};
 
 //
-const composants=[cpu1,cpu2,cpu3,gpu1,gpu2,cpu4,gpu3];
+const composants=[cpu1,cpu2,cpu3,gpu1,gpu2,cpu4,gpu3,gpu4,mb1];
 
 
 const list_ram=["DDR1","DDR2","DDR3","DDR4"];
