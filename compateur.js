@@ -125,7 +125,9 @@ function makePage(id1,id2){
                 ["Type"                             ,"Barrete(s) de ram"           ,""      ,false    ,"Barrete(s) de ram"          ,""     ],
                 ["Nom"                              ,comp1.nom                     ,""      ,false    ,comp2.nom                    ,""     ],
                 ["Marque"                           ,comp1.marque                  ,""      ,false    ,comp2.marque                 ,""     ],
-                ["Prix"                             ,comp1.prix                    ," €"    ,"nb2"    ,comp2.prix                   ," €"   ]
+                ["Prix"                             ,comp1.prix                    ," €"    ,"nb2"    ,comp2.prix                   ," €"   ],
+                ["Puissance délivrée"               ,comp1.watts                   ,"W"     ,"nb"     ,comp2.watts                  ,"W"    ],
+                ["Certification"                    ,comp1.certification           ,""      ,"cert"   ,comp2.certification          ,""     ]
             ]
         }
         if(comp1.type=="boitier"){
@@ -226,6 +228,17 @@ function makePage(id1,id2){
                         else{
                             mc=3;
                         }
+                    }
+                }
+                else if(el[3]=="cert"){
+                    if(list_certs.indexOf(el[1]) > list_certs.indexOf(el[4])){
+                        mc=1;   
+                    }
+                    else if(list_certs.indexOf(el[1]) < list_certs.indexOf(el[4])){
+                        mc=2;   
+                    }
+                    else{
+                        mc=3;
                     }
                 }
             }
